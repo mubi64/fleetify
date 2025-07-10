@@ -1,0 +1,39 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-07-10 10:50:30.862641",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "feature",
+  "column_break_qhow"
+ ],
+ "fields": [
+  {
+   "fieldname": "feature",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Feature"
+  },
+  {
+   "fieldname": "column_break_qhow",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-07-10 11:32:16.079521",
+ "modified_by": "Administrator",
+ "module": "Fleetify",
+ "name": "Vehicle Feature",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

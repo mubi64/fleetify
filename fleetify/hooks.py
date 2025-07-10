@@ -5,6 +5,17 @@ app_description = "Car Rental Management Sy"
 app_email = "info@sowaan.com"
 app_license = "mit"
 
+fixtures = [
+	{
+        "doctype":"Custom Field",
+		"filters":[
+			[
+				"module", "=", "Fleetify"
+			]
+		]
+	}    
+]
+
 # Apps
 # ------------------
 
@@ -144,6 +155,12 @@ app_license = "mit"
 # 		"on_trash": "method"
 # 	}
 # }
+doc_events = {
+    "Sales Invoice": {
+        "validate": "fleetify.events.sales_invoice.validate",
+        "on_trash": "fleetify.events.sales_invoice.on_trash"
+    }
+}
 
 # Scheduled Tasks
 # ---------------

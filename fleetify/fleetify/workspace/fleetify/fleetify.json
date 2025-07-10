@@ -1,0 +1,163 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"yUq9vQjEFj\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Fleetify (Fleet Rental Management System)</span>\",\"col\":12}},{\"id\":\"34f1_Zes2G\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"FQmXdAR4s2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"\u271a Add Reservation\",\"col\":3}},{\"id\":\"Q0rvvlAg2z\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"\u271a Add Agreement\",\"col\":3}},{\"id\":\"r3OjkZu1Ub\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"UdFb5lwNG8\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Vehicle Reservation\",\"col\":3}},{\"id\":\"uV5CxMuvcO\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Rental Agreement\",\"col\":3}},{\"id\":\"nSGxEZkNYc\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sales Invoice\",\"col\":3}},{\"id\":\"tBVm2Vra-K\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"wdTBV6nrFB\",\"type\":\"card\",\"data\":{\"card_name\":\"Setups\",\"col\":4}},{\"id\":\"quydNeFko-\",\"type\":\"card\",\"data\":{\"card_name\":\"Operations\",\"col\":4}},{\"id\":\"GTpjNETdsb\",\"type\":\"card\",\"data\":{\"card_name\":\"Tools\",\"col\":4}}]",
+ "creation": "2025-07-10 17:21:49.876245",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "map",
+ "idx": 0,
+ "indicator_color": "",
+ "is_hidden": 0,
+ "label": "Fleetify",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Setups",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Customer",
+   "link_count": 0,
+   "link_to": "Customer",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Rental Vehicle",
+   "link_count": 0,
+   "link_to": "Rental Vehicle",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Operations",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Vehicle Reservation",
+   "link_count": 0,
+   "link_to": "Vehicle Reservation",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Rental Agreement",
+   "link_count": 0,
+   "link_to": "Rental Agreement",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sales Invoice",
+   "link_count": 0,
+   "link_to": "Sales Invoice",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Tools",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Fleetify Settings",
+   "link_count": 0,
+   "link_to": "Fleetify Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2025-07-10 17:38:33.071780",
+ "modified_by": "Administrator",
+ "module": "Fleetify",
+ "name": "Fleetify",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 2.0,
+ "shortcuts": [
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "format": "{} today",
+   "label": "Rental Agreement",
+   "link_to": "Rental Agreement",
+   "stats_filter": "[[\"Rental Agreement\",\"creation\",\"Timespan\",\"today\",false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "New",
+   "format": "{} today",
+   "label": "\u271a Add Reservation",
+   "link_to": "Vehicle Reservation",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "format": "{} today",
+   "label": "Sales Invoice",
+   "link_to": "Sales Invoice",
+   "stats_filter": "[[\"Sales Invoice\",\"creation\",\"Timespan\",\"today\",false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "format": "{} today",
+   "label": "Vehicle Reservation",
+   "link_to": "Vehicle Reservation",
+   "stats_filter": "[[\"Vehicle Reservation\",\"creation\",\"Timespan\",\"today\",false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "New",
+   "format": "{} today",
+   "label": "\u271a Add Agreement",
+   "link_to": "Rental Agreement",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Fleetify"
+}
