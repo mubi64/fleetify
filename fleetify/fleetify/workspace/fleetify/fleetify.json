@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"yUq9vQjEFj\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Fleetify (Fleet Rental Management System)</span>\",\"col\":12}},{\"id\":\"34f1_Zes2G\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"FQmXdAR4s2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"\u271a Add Reservation\",\"col\":3}},{\"id\":\"Q0rvvlAg2z\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"\u271a Add Agreement\",\"col\":3}},{\"id\":\"r3OjkZu1Ub\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"UdFb5lwNG8\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Vehicle Reservation\",\"col\":3}},{\"id\":\"uV5CxMuvcO\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Rental Agreement\",\"col\":3}},{\"id\":\"nSGxEZkNYc\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sales Invoice\",\"col\":3}},{\"id\":\"tBVm2Vra-K\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"wdTBV6nrFB\",\"type\":\"card\",\"data\":{\"card_name\":\"Setups\",\"col\":4}},{\"id\":\"quydNeFko-\",\"type\":\"card\",\"data\":{\"card_name\":\"Operations\",\"col\":4}},{\"id\":\"GTpjNETdsb\",\"type\":\"card\",\"data\":{\"card_name\":\"Tools\",\"col\":4}}]",
+ "content": "[{\"id\":\"yUq9vQjEFj\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Fleetify</span>\",\"col\":12}},{\"id\":\"xwnlVgpnBC\",\"type\":\"paragraph\",\"data\":{\"text\":\"Fleet Rental Management System\",\"col\":12}},{\"id\":\"34f1_Zes2G\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"FQmXdAR4s2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"\u271a Add Reservation\",\"col\":3}},{\"id\":\"Q0rvvlAg2z\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"\u271a Add Agreement\",\"col\":3}},{\"id\":\"r3OjkZu1Ub\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"UdFb5lwNG8\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Vehicle Reservation\",\"col\":3}},{\"id\":\"uV5CxMuvcO\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Rental Agreement\",\"col\":3}},{\"id\":\"nSGxEZkNYc\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sales Invoice\",\"col\":3}},{\"id\":\"tBVm2Vra-K\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"wdTBV6nrFB\",\"type\":\"card\",\"data\":{\"card_name\":\"Setups\",\"col\":4}},{\"id\":\"quydNeFko-\",\"type\":\"card\",\"data\":{\"card_name\":\"Operations\",\"col\":4}},{\"id\":\"GTpjNETdsb\",\"type\":\"card\",\"data\":{\"card_name\":\"Tools\",\"col\":4}}]",
  "creation": "2025-07-10 17:21:49.876245",
  "custom_blocks": [],
  "docstatus": 0,
@@ -101,7 +101,7 @@
    "type": "Link"
   }
  ],
- "modified": "2025-07-10 17:38:33.071780",
+ "modified": "2025-07-10 17:44:16.907892",
  "modified_by": "Administrator",
  "module": "Fleetify",
  "name": "Fleetify",
