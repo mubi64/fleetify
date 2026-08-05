@@ -6,18 +6,127 @@
  "engine": "InnoDB",
  "field_order": [
   "customer",
+  "customer_name",
+  "mobile",
+  "email",
+  "uae_emirate",
   "column_break_3",
   "status",
   "billing_status",
+  "customer_type",
+  "customer_nationality",
+  "source",
+  "sales_agent",
+  "customer_documents_section",
+  "passport_number",
+  "passport_expiry",
+  "passport_issue_date",
+  "passport_issue_place",
+  "passport_image",
+  "passport_expiry_image",
+  "column_break_cust_docs",
+  "customer_license",
+  "customer_license_expiry",
+  "customer_license_image",
+  "customer_license_expiry_image",
+  "customer_signature",
+  "column_break_cust_docs_2",
+  "tax_registration_number",
+  "tax_registration_image",
+  "trade_license_number",
+  "trade_license_expiry",
+  "lpo",
+  "company_driver_section",
+  "with_driver",
+  "company_driver",
+  "new_driver",
+  "driver_nationality",
+  "driver_license",
+  "column_break_driver",
+  "driver_license_issue_place",
+  "driver_license_issue_date",
+  "driver_license_expiry_date",
+  "driver_signature",
+  "additional_driver_section",
+  "has_additional_driver",
+  "additional_driver",
+  "additional_driver_name",
+  "additional_driver_email",
+  "additional_driver_contact",
+  "additional_driver_nationality",
+  "additional_driver_dob",
+  "column_break_additional_driver",
+  "additional_driver_passport",
+  "additional_driver_passport_expiry",
+  "additional_driver_license",
+  "additional_driver_issue_place",
+  "additional_driver_issue_date",
+  "additional_driver_expiry_date",
+  "additional_driver_signature",
+  "vehicle_section",
+  "vehicle",
+  "vehicle_name",
+  "vehicle_make",
+  "vehicle_model",
+  "vehicle_year",
+  "column_break_vehicle",
+  "plate",
+  "mileage",
+  "mileage_image",
+  "fuel_level",
+  "fuel_image",
+  "extra_km_charge",
   "rental_period_section",
   "pickup_date_and_time",
   "dropoff_date_and_time",
   "duration",
+  "start_date_time",
+  "end_date_time",
+  "rental_period",
+  "days",
   "column_break_jpny",
-  "vehicle",
+  "is_recurring_contract",
+  "automatic_rental_update",
+  "replace_date_time",
+  "replace_reason",
   "pricing_section",
+  "daily_base_rent",
+  "cardoo_rent",
   "daily_rate",
+  "monthly_base_rental",
+  "base_rental",
+  "cardoo_amount",
+  "column_break_pricing",
   "total_rental_cost",
+  "grand_total",
+  "amount",
+  "add_vat",
+  "amount_without_vat",
+  "vat_amount",
+  "payments_section",
+  "advance_payment",
+  "advance_payment_type",
+  "advance_bank",
+  "advance_type",
+  "column_break_payments",
+  "deposit",
+  "deposit_payment_type",
+  "deposit_bank",
+  "paid_in_total",
+  "delivery_section",
+  "car_delivery",
+  "pickup_location",
+  "pickup_charge",
+  "dropoff_location",
+  "dropoff_charge",
+  "column_break_delivery",
+  "baby_seat",
+  "baby_seats",
+  "baby_seats_charge",
+  "add_insurance_no_deposit_fee",
+  "insurance_no_deposit_fee",
+  "with_chauffeur",
+  "chauffeur_charge",
   "items_to_bill_section",
   "billing_items",
   "additional_charges_section",
@@ -25,7 +134,9 @@
   "total_amount",
   "billing_section",
   "sales_invoice",
-  "amended_from"
+  "amended_from",
+  "remarks_section",
+  "notes"
  ],
  "fields": [
   {
@@ -37,12 +148,32 @@
    "reqd": 1
   },
   {
-   "fieldname": "vehicle",
-   "fieldtype": "Link",
+   "fetch_from": "customer.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Vehicle",
-   "options": "Rental Vehicle",
-   "reqd": 1
+   "label": "Customer Name"
+  },
+  {
+   "fetch_from": "customer.mobile_no",
+   "fieldname": "mobile",
+   "fieldtype": "Data",
+   "label": "Mobile",
+   "options": "Phone"
+  },
+  {
+   "fetch_from": "customer.email_id",
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "description": "Relevant Emirate of the UAE for the tax report",
+   "fieldname": "uae_emirate",
+   "fieldtype": "Select",
+   "label": "Emirate",
+   "options": "\nAbu Dhabi\nAjman\nDubai\nFujairah\nRas Al Khaimah\nSharjah\nUmm Al Quwain"
   },
   {
    "fieldname": "column_break_3",
@@ -62,6 +193,356 @@
    "label": "Billing Status",
    "options": "Unbilled\nBilled",
    "read_only": 1
+  },
+  {
+   "fieldname": "customer_type",
+   "fieldtype": "Select",
+   "label": "Customer Type",
+   "options": "\nIndividual\nOrganization\nTourist"
+  },
+  {
+   "fieldname": "customer_nationality",
+   "fieldtype": "Select",
+   "label": "Customer Nationality",
+   "options": "\nResidential\nGCC\nTourist"
+  },
+  {
+   "fieldname": "source",
+   "fieldtype": "Link",
+   "label": "Source",
+   "options": "Lead Source"
+  },
+  {
+   "fieldname": "sales_agent",
+   "fieldtype": "Link",
+   "label": "Sales Agent",
+   "options": "Sales Person"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "customer_documents_section",
+   "fieldtype": "Section Break",
+   "label": "Customer Documents"
+  },
+  {
+   "fieldname": "passport_number",
+   "fieldtype": "Data",
+   "label": "Passport/Emirates ID Number"
+  },
+  {
+   "fieldname": "passport_expiry",
+   "fieldtype": "Date",
+   "label": "Passport/Emirates ID Expiry"
+  },
+  {
+   "fieldname": "passport_issue_date",
+   "fieldtype": "Date",
+   "label": "Date of Issue"
+  },
+  {
+   "fieldname": "passport_issue_place",
+   "fieldtype": "Data",
+   "label": "Place of Issue"
+  },
+  {
+   "fieldname": "passport_image",
+   "fieldtype": "Attach",
+   "label": "Passport/Emirates ID Image"
+  },
+  {
+   "fieldname": "passport_expiry_image",
+   "fieldtype": "Attach",
+   "label": "Passport/Emirates ID Expiry Image"
+  },
+  {
+   "fieldname": "column_break_cust_docs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer_license",
+   "fieldtype": "Data",
+   "label": "Customer License"
+  },
+  {
+   "fieldname": "customer_license_expiry",
+   "fieldtype": "Date",
+   "label": "Customer License Expiry"
+  },
+  {
+   "fieldname": "customer_license_image",
+   "fieldtype": "Attach",
+   "label": "Customer License Image"
+  },
+  {
+   "fieldname": "customer_license_expiry_image",
+   "fieldtype": "Attach",
+   "label": "Customer License Expiry Image"
+  },
+  {
+   "fieldname": "customer_signature",
+   "fieldtype": "Attach Image",
+   "label": "Customer Signature"
+  },
+  {
+   "fieldname": "column_break_cust_docs_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tax_registration_number",
+   "fieldtype": "Data",
+   "label": "Tax Reg. Number"
+  },
+  {
+   "fieldname": "tax_registration_image",
+   "fieldtype": "Attach",
+   "label": "Tax Reg. Image"
+  },
+  {
+   "fieldname": "trade_license_number",
+   "fieldtype": "Data",
+   "label": "Trade License Number"
+  },
+  {
+   "fieldname": "trade_license_expiry",
+   "fieldtype": "Date",
+   "label": "Trade License Expiry"
+  },
+  {
+   "fieldname": "lpo",
+   "fieldtype": "Attach",
+   "label": "LPO"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "company_driver_section",
+   "fieldtype": "Section Break",
+   "label": "Staff/Company Driver"
+  },
+  {
+   "fieldname": "with_driver",
+   "fieldtype": "Check",
+   "label": "Is this vehicle going with the chauffeur?"
+  },
+  {
+   "depends_on": "eval:doc.with_driver",
+   "fieldname": "company_driver",
+   "fieldtype": "Link",
+   "label": "Staff/Company Driver",
+   "options": "Employee"
+  },
+  {
+   "depends_on": "eval:doc.with_driver",
+   "fieldname": "new_driver",
+   "fieldtype": "Data",
+   "label": "New Driver"
+  },
+  {
+   "depends_on": "eval:doc.with_driver",
+   "fieldname": "driver_nationality",
+   "fieldtype": "Data",
+   "label": "Driver Nationality"
+  },
+  {
+   "depends_on": "eval:doc.with_driver",
+   "fieldname": "driver_license",
+   "fieldtype": "Data",
+   "label": "Driver License"
+  },
+  {
+   "fieldname": "column_break_driver",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.with_driver",
+   "fieldname": "driver_license_issue_place",
+   "fieldtype": "Data",
+   "label": "Place of Issue"
+  },
+  {
+   "depends_on": "eval:doc.with_driver",
+   "fieldname": "driver_license_issue_date",
+   "fieldtype": "Date",
+   "label": "Date of Issue"
+  },
+  {
+   "depends_on": "eval:doc.with_driver",
+   "fieldname": "driver_license_expiry_date",
+   "fieldtype": "Date",
+   "label": "Date of Expiry"
+  },
+  {
+   "depends_on": "eval:doc.with_driver",
+   "fieldname": "driver_signature",
+   "fieldtype": "Attach Image",
+   "label": "Driver Signature"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "additional_driver_section",
+   "fieldtype": "Section Break",
+   "label": "Additional Driver"
+  },
+  {
+   "fieldname": "has_additional_driver",
+   "fieldtype": "Check",
+   "label": "Additional Driver"
+  },
+  {
+   "depends_on": "eval:doc.has_additional_driver",
+   "fieldname": "additional_driver",
+   "fieldtype": "Link",
+   "label": "Driver Name",
+   "options": "Driver"
+  },
+  {
+   "depends_on": "eval:doc.has_additional_driver",
+   "fieldname": "additional_driver_name",
+   "fieldtype": "Data",
+   "label": "Driver Name"
+  },
+  {
+   "depends_on": "eval:doc.has_additional_driver",
+   "fieldname": "additional_driver_email",
+   "fieldtype": "Data",
+   "label": "Driver Email",
+   "options": "Email"
+  },
+  {
+   "depends_on": "eval:doc.has_additional_driver",
+   "fieldname": "additional_driver_contact",
+   "fieldtype": "Data",
+   "label": "Driver Contact No.",
+   "options": "Phone"
+  },
+  {
+   "depends_on": "eval:doc.has_additional_driver",
+   "fieldname": "additional_driver_nationality",
+   "fieldtype": "Data",
+   "label": "Driver Nationality"
+  },
+  {
+   "depends_on": "eval:doc.has_additional_driver",
+   "fieldname": "additional_driver_dob",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "column_break_additional_driver",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.has_additional_driver",
+   "fieldname": "additional_driver_passport",
+   "fieldtype": "Data",
+   "label": "Passport/Emirates ID Number"
+  },
+  {
+   "depends_on": "eval:doc.has_additional_driver",
+   "fieldname": "additional_driver_passport_expiry",
+   "fieldtype": "Date",
+   "label": "Passport/Emirates ID Expiry"
+  },
+  {
+   "depends_on": "eval:doc.has_additional_driver",
+   "fieldname": "additional_driver_license",
+   "fieldtype": "Data",
+   "label": "Driver License"
+  },
+  {
+   "depends_on": "eval:doc.has_additional_driver",
+   "fieldname": "additional_driver_issue_place",
+   "fieldtype": "Data",
+   "label": "Place of Issue"
+  },
+  {
+   "depends_on": "eval:doc.has_additional_driver",
+   "fieldname": "additional_driver_issue_date",
+   "fieldtype": "Date",
+   "label": "Date of Issue"
+  },
+  {
+   "depends_on": "eval:doc.has_additional_driver",
+   "fieldname": "additional_driver_expiry_date",
+   "fieldtype": "Date",
+   "label": "Date of Expiry"
+  },
+  {
+   "depends_on": "eval:doc.has_additional_driver",
+   "fieldname": "additional_driver_signature",
+   "fieldtype": "Attach Image",
+   "label": "Driver Signature"
+  },
+  {
+   "fieldname": "vehicle_section",
+   "fieldtype": "Section Break",
+   "label": "Vehicle"
+  },
+  {
+   "fieldname": "vehicle",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Vehicle",
+   "options": "Rental Vehicle",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "vehicle.vehicle_name",
+   "fieldname": "vehicle_name",
+   "fieldtype": "Data",
+   "label": "Vehicle Name"
+  },
+  {
+   "fetch_from": "vehicle.vehicle_make",
+   "fieldname": "vehicle_make",
+   "fieldtype": "Data",
+   "label": "Vehicle Make"
+  },
+  {
+   "fetch_from": "vehicle.vehicle_model",
+   "fieldname": "vehicle_model",
+   "fieldtype": "Data",
+   "label": "Vehicle Model"
+  },
+  {
+   "fetch_from": "vehicle.year",
+   "fieldname": "vehicle_year",
+   "fieldtype": "Int",
+   "label": "Vehicle Year"
+  },
+  {
+   "fieldname": "column_break_vehicle",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "vehicle.license_plate",
+   "fieldname": "plate",
+   "fieldtype": "Data",
+   "label": "Plate"
+  },
+  {
+   "fieldname": "mileage",
+   "fieldtype": "Float",
+   "label": "Mileage"
+  },
+  {
+   "fieldname": "mileage_image",
+   "fieldtype": "Attach",
+   "label": "Mileage Image"
+  },
+  {
+   "fieldname": "fuel_level",
+   "fieldtype": "Percent",
+   "label": "Fuel"
+  },
+  {
+   "fieldname": "fuel_image",
+   "fieldtype": "Attach",
+   "label": "Fuel Image"
+  },
+  {
+   "fieldname": "extra_km_charge",
+   "fieldtype": "Currency",
+   "label": "Extra KM Charge"
   },
   {
    "fieldname": "rental_period_section",
@@ -89,9 +570,66 @@
    "read_only": 1
   },
   {
+   "fieldname": "start_date_time",
+   "fieldtype": "Datetime",
+   "label": "Start Date Time"
+  },
+  {
+   "fieldname": "end_date_time",
+   "fieldtype": "Datetime",
+   "label": "End Date Time"
+  },
+  {
+   "fieldname": "rental_period",
+   "fieldtype": "Select",
+   "label": "Rental Period",
+   "options": "\nDaily\nWeekly\nMonthly"
+  },
+  {
+   "fieldname": "days",
+   "fieldtype": "Int",
+   "label": "Days"
+  },
+  {
+   "fieldname": "column_break_jpny",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "is_recurring_contract",
+   "fieldtype": "Check",
+   "label": "Recurring Contract"
+  },
+  {
+   "fieldname": "automatic_rental_update",
+   "fieldtype": "Check",
+   "label": "Automatic Rental Update"
+  },
+  {
+   "fieldname": "replace_date_time",
+   "fieldtype": "Datetime",
+   "label": "Replace Date Time"
+  },
+  {
+   "depends_on": "eval:doc.replace_date_time",
+   "fieldname": "replace_reason",
+   "fieldtype": "Select",
+   "label": "Replace Reason",
+   "options": "\nCustomer did not like\nAccident/Damage\nMaintenance service needed"
+  },
+  {
    "fieldname": "pricing_section",
    "fieldtype": "Section Break",
    "label": "Pricing"
+  },
+  {
+   "fieldname": "daily_base_rent",
+   "fieldtype": "Check",
+   "label": "Daily Base Rent"
+  },
+  {
+   "fieldname": "cardoo_rent",
+   "fieldtype": "Check",
+   "label": "Cardoo Rent"
   },
   {
    "fieldname": "daily_rate",
@@ -100,10 +638,188 @@
    "read_only": 1
   },
   {
+   "fieldname": "monthly_base_rental",
+   "fieldtype": "Currency",
+   "label": "Monthly Base Rental"
+  },
+  {
+   "fieldname": "base_rental",
+   "fieldtype": "Currency",
+   "label": "Base Rental"
+  },
+  {
+   "depends_on": "eval:doc.cardoo_rent",
+   "fieldname": "cardoo_amount",
+   "fieldtype": "Currency",
+   "label": "Cardoo Amount"
+  },
+  {
+   "fieldname": "column_break_pricing",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "total_rental_cost",
    "fieldtype": "Currency",
    "label": "Total Rental Cost",
    "read_only": 1
+  },
+  {
+   "fieldname": "grand_total",
+   "fieldtype": "Currency",
+   "label": "Total"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount"
+  },
+  {
+   "fieldname": "add_vat",
+   "fieldtype": "Check",
+   "label": "Add VAT?"
+  },
+  {
+   "depends_on": "eval:doc.add_vat",
+   "fieldname": "amount_without_vat",
+   "fieldtype": "Currency",
+   "label": "Amount (without VAT)"
+  },
+  {
+   "depends_on": "eval:doc.add_vat",
+   "fieldname": "vat_amount",
+   "fieldtype": "Currency",
+   "label": "5% VAT"
+  },
+  {
+   "fieldname": "payments_section",
+   "fieldtype": "Section Break",
+   "label": "Payments"
+  },
+  {
+   "fieldname": "advance_payment",
+   "fieldtype": "Currency",
+   "label": "Advance Payment"
+  },
+  {
+   "fieldname": "advance_payment_type",
+   "fieldtype": "Select",
+   "label": "Advance Payment Type",
+   "options": "\nCash\nOnline Transfer\nCheque\nBanker Draft\nBank Deposit\nPre Auth\nPOS\nCrypto\nPayment Link"
+  },
+  {
+   "depends_on": "eval:doc.advance_payment_type",
+   "fieldname": "advance_bank",
+   "fieldtype": "Data",
+   "label": "Bank"
+  },
+  {
+   "fieldname": "advance_type",
+   "fieldtype": "Select",
+   "label": "Advance Type",
+   "options": "\nFull Amount\nCustom Amount"
+  },
+  {
+   "fieldname": "column_break_payments",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "deposit",
+   "fieldtype": "Currency",
+   "label": "Deposit"
+  },
+  {
+   "fieldname": "deposit_payment_type",
+   "fieldtype": "Select",
+   "label": "Deposit Payment Type",
+   "options": "\nCash\nOnline Transfer\nCheque\nBanker Draft\nBank Deposit\nPre Auth\nPOS\nCrypto\nPayment Link"
+  },
+  {
+   "depends_on": "eval:doc.deposit_payment_type",
+   "fieldname": "deposit_bank",
+   "fieldtype": "Data",
+   "label": "Bank"
+  },
+  {
+   "fieldname": "paid_in_total",
+   "fieldtype": "Currency",
+   "label": "Paid in Total (by customer)"
+  },
+  {
+   "fieldname": "delivery_section",
+   "fieldtype": "Section Break",
+   "label": "Delivery & Extras"
+  },
+  {
+   "fieldname": "car_delivery",
+   "fieldtype": "Check",
+   "label": "Do you want this car delivered?"
+  },
+  {
+   "depends_on": "eval:doc.car_delivery",
+   "fieldname": "pickup_location",
+   "fieldtype": "Data",
+   "label": "Pickup Location"
+  },
+  {
+   "depends_on": "eval:doc.car_delivery",
+   "fieldname": "pickup_charge",
+   "fieldtype": "Currency",
+   "label": "Pickup Charge"
+  },
+  {
+   "depends_on": "eval:doc.car_delivery",
+   "fieldname": "dropoff_location",
+   "fieldtype": "Data",
+   "label": "Dropoff Location"
+  },
+  {
+   "depends_on": "eval:doc.car_delivery",
+   "fieldname": "dropoff_charge",
+   "fieldtype": "Currency",
+   "label": "Dropoff Charge"
+  },
+  {
+   "fieldname": "column_break_delivery",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "baby_seat",
+   "fieldtype": "Check",
+   "label": "Do you want to add baby seats?"
+  },
+  {
+   "depends_on": "eval:doc.baby_seat",
+   "fieldname": "baby_seats",
+   "fieldtype": "Int",
+   "label": "Baby Seats"
+  },
+  {
+   "depends_on": "eval:doc.baby_seat",
+   "fieldname": "baby_seats_charge",
+   "fieldtype": "Currency",
+   "label": "Baby Seats Charge"
+  },
+  {
+   "fieldname": "add_insurance_no_deposit_fee",
+   "fieldtype": "Check",
+   "label": "Do you want to add Insurance/No Deposit Fee?"
+  },
+  {
+   "depends_on": "eval:doc.add_insurance_no_deposit_fee",
+   "fieldname": "insurance_no_deposit_fee",
+   "fieldtype": "Currency",
+   "label": "Insurance/No Deposit Fee"
+  },
+  {
+   "fieldname": "with_chauffeur",
+   "fieldtype": "Check",
+   "label": "Is this vehicle going with an additional driver?"
+  },
+  {
+   "depends_on": "eval:doc.with_chauffeur",
+   "fieldname": "chauffeur_charge",
+   "fieldtype": "Currency",
+   "label": "Additional Driver Charge"
   },
   {
    "fieldname": "items_to_bill_section",
@@ -111,6 +827,7 @@
    "label": "Items to Bill"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "billing_items",
    "fieldtype": "Table",
    "label": "Billing Items",
@@ -122,12 +839,14 @@
    "label": "Additional Charges"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "additional_charges",
    "fieldtype": "Table",
    "label": "Additional Charges",
    "options": "Additional Charge"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "total_amount",
    "fieldtype": "Currency",
    "label": "Total Amount",
@@ -155,15 +874,22 @@
    "search_index": 1
   },
   {
-   "fieldname": "column_break_jpny",
-   "fieldtype": "Column Break"
+   "collapsible": 1,
+   "fieldname": "remarks_section",
+   "fieldtype": "Section Break",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-07-10 17:16:29.814389",
+ "modified": "2026-08-04 12:30:00.000000",
  "modified_by": "Administrator",
  "module": "Fleetify",
  "name": "Rental Agreement",

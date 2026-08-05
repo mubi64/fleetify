@@ -20,8 +20,16 @@ class RentalAgreement(Document):
 		self.check_vehicle_availability()
 		self.calculate_duration()
 
-		self.populate_billing_items()
 		self.calculate_total_rental_cost()
+		self.populate_billing_items()
+		self.calculate_total_amount()
+
+	def before_update_after_submit(self):
+		# Tolls and fines land on the agreement after it is submitted, so the
+		# billing table has to be rebuilt outside the normal validate() path.
+		# This runs before update_children(), so stale rows are cleaned up for us.
+		self.calculate_total_rental_cost()
+		self.populate_billing_items()
 		self.calculate_total_amount()
 
 	def before_submit(self):
