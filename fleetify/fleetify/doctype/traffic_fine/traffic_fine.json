@@ -1,0 +1,225 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-08-04 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "fine_section",
+  "source",
+  "date_time",
+  "vehicle",
+  "plate",
+  "plate_code",
+  "column_break_fine",
+  "rental_agreement",
+  "customer",
+  "status",
+  "ticket_number",
+  "traffic_file_no",
+  "detail_section",
+  "fine_type",
+  "fine_location",
+  "column_break_detail",
+  "description",
+  "attachment",
+  "amount_section",
+  "amount",
+  "column_break_amount",
+  "add_vat",
+  "vat_amount",
+  "total_cost",
+  "billing_section",
+  "billed_to_customer"
+ ],
+ "fields": [
+  {
+   "fieldname": "fine_section",
+   "fieldtype": "Section Break",
+   "label": "Fine"
+  },
+  {
+   "default": "Manual",
+   "fieldname": "source",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Source",
+   "options": "Manual\nAutomated\nVehicle Based",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_time",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Date/Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vehicle",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Vehicle",
+   "options": "Rental Vehicle",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "vehicle.license_plate",
+   "fieldname": "plate",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Plate",
+   "read_only": 1
+  },
+  {
+   "fieldname": "plate_code",
+   "fieldtype": "Data",
+   "label": "Plate Code"
+  },
+  {
+   "fieldname": "column_break_fine",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Agreement in force when the fine was issued; drives rebilling.",
+   "fieldname": "rental_agreement",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Contract ID",
+   "options": "Rental Agreement"
+  },
+  {
+   "fetch_from": "rental_agreement.customer",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "read_only": 1
+  },
+  {
+   "default": "Unpaid",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "\nUnpaid\nPaid\nDisputed\nCancelled"
+  },
+  {
+   "fieldname": "ticket_number",
+   "fieldtype": "Data",
+   "label": "Ticket Number"
+  },
+  {
+   "fieldname": "traffic_file_no",
+   "fieldtype": "Data",
+   "label": "Traffic File No."
+  },
+  {
+   "fieldname": "detail_section",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "fine_type",
+   "fieldtype": "Data",
+   "label": "Fine Type"
+  },
+  {
+   "fieldname": "fine_location",
+   "fieldtype": "Data",
+   "label": "Fine Location"
+  },
+  {
+   "fieldname": "column_break_detail",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "label": "Attachment"
+  },
+  {
+   "fieldname": "amount_section",
+   "fieldtype": "Section Break",
+   "label": "Amount"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Fine Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_amount",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "add_vat",
+   "fieldtype": "Check",
+   "label": "Add VAT?"
+  },
+  {
+   "depends_on": "eval:doc.add_vat",
+   "fieldname": "vat_amount",
+   "fieldtype": "Currency",
+   "label": "5% VAT",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_cost",
+   "fieldtype": "Currency",
+   "label": "Total Cost with VAT",
+   "read_only": 1
+  },
+  {
+   "fieldname": "billing_section",
+   "fieldtype": "Section Break",
+   "label": "Rebilling"
+  },
+  {
+   "default": "0",
+   "description": "Set when this fine has been pushed to the agreement's additional charges.",
+   "fieldname": "billed_to_customer",
+   "fieldtype": "Check",
+   "label": "Billed to Customer",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-04 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Fleetify",
+ "name": "Traffic Fine",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "search_fields": "vehicle,ticket_number,rental_agreement",
+ "sort_field": "date_time",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "vehicle",
+ "track_changes": 1
+}

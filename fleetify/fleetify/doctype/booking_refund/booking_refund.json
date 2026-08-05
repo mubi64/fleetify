@@ -1,0 +1,277 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-08-04 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "refund_section",
+  "rental_agreement",
+  "customer",
+  "refund_date",
+  "column_break_refund",
+  "start_date",
+  "refundable_date",
+  "balance_section",
+  "total_fees",
+  "deposit",
+  "column_break_balance",
+  "paid",
+  "deduction_section",
+  "salik",
+  "fine",
+  "fuel_charges",
+  "extra_km_charges",
+  "column_break_deduction",
+  "damage",
+  "other_charges",
+  "rent_adjusted",
+  "total_deductions",
+  "outcome_section",
+  "refund",
+  "payable_by_client",
+  "column_break_outcome",
+  "pending_refund",
+  "is_settled",
+  "payment_section",
+  "payment_method",
+  "refund_bank",
+  "column_break_payment",
+  "sales_invoice",
+  "notes_section",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "refund_section",
+   "fieldtype": "Section Break",
+   "label": "Refund"
+  },
+  {
+   "fieldname": "rental_agreement",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Contract ID",
+   "options": "Rental Agreement",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "rental_agreement.customer",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "read_only": 1
+  },
+  {
+   "fieldname": "refund_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_refund",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "rental_agreement.pickup_date_and_time",
+   "fieldname": "start_date",
+   "fieldtype": "Datetime",
+   "label": "Start Date",
+   "read_only": 1
+  },
+  {
+   "description": "Date from which the deposit becomes refundable.",
+   "fieldname": "refundable_date",
+   "fieldtype": "Date",
+   "label": "Refundable Date"
+  },
+  {
+   "fieldname": "balance_section",
+   "fieldtype": "Section Break",
+   "label": "Balance"
+  },
+  {
+   "fetch_from": "rental_agreement.total_amount",
+   "fieldname": "total_fees",
+   "fieldtype": "Currency",
+   "label": "Total Fees",
+   "read_only": 1
+  },
+  {
+   "fieldname": "deposit",
+   "fieldtype": "Currency",
+   "label": "Deposit Paid by Client",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_balance",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "rental_agreement.paid_in_total",
+   "fieldname": "paid",
+   "fieldtype": "Currency",
+   "label": "Paid",
+   "read_only": 1
+  },
+  {
+   "fieldname": "deduction_section",
+   "fieldtype": "Section Break",
+   "label": "Deductions"
+  },
+  {
+   "fieldname": "salik",
+   "fieldtype": "Currency",
+   "label": "Salik"
+  },
+  {
+   "fieldname": "fine",
+   "fieldtype": "Currency",
+   "label": "Fine"
+  },
+  {
+   "fieldname": "fuel_charges",
+   "fieldtype": "Currency",
+   "label": "Fuel Charges"
+  },
+  {
+   "fieldname": "extra_km_charges",
+   "fieldtype": "Currency",
+   "label": "Extra km Charges"
+  },
+  {
+   "fieldname": "column_break_deduction",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "damage",
+   "fieldtype": "Currency",
+   "label": "Damage"
+  },
+  {
+   "fieldname": "other_charges",
+   "fieldtype": "Currency",
+   "label": "Other Charges"
+  },
+  {
+   "fieldname": "rent_adjusted",
+   "fieldtype": "Currency",
+   "label": "Rent Adjusted"
+  },
+  {
+   "bold": 1,
+   "fieldname": "total_deductions",
+   "fieldtype": "Currency",
+   "label": "Total Deductions",
+   "read_only": 1
+  },
+  {
+   "fieldname": "outcome_section",
+   "fieldtype": "Section Break",
+   "label": "Outcome"
+  },
+  {
+   "description": "Deposit less deductions, when the balance favours the client.",
+   "fieldname": "refund",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Refund",
+   "read_only": 1
+  },
+  {
+   "description": "Deductions less deposit, when the balance favours the company.",
+   "fieldname": "payable_by_client",
+   "fieldtype": "Currency",
+   "label": "Payable by Client",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_outcome",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pending_refund",
+   "fieldtype": "Currency",
+   "label": "Pending Refund",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_settled",
+   "fieldtype": "Check",
+   "label": "Settled"
+  },
+  {
+   "fieldname": "payment_section",
+   "fieldtype": "Section Break",
+   "label": "Payment"
+  },
+  {
+   "fieldname": "payment_method",
+   "fieldtype": "Select",
+   "label": "Payment Method",
+   "options": "\nCash\nBank Transfer\nExchange\nCard Refund"
+  },
+  {
+   "depends_on": "eval:doc.payment_method",
+   "fieldname": "refund_bank",
+   "fieldtype": "Data",
+   "label": "Bank"
+  },
+  {
+   "fieldname": "column_break_payment",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "label": "Invoice",
+   "options": "Sales Invoice",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Description"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-04 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Fleetify",
+ "name": "Booking Refund",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "search_fields": "rental_agreement,customer",
+ "sort_field": "refund_date",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "rental_agreement",
+ "track_changes": 1
+}

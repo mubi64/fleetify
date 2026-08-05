@@ -7,7 +7,22 @@
  "field_order": [
   "rental_item",
   "additional_charge_item",
-  "column_break_sxdp"
+  "column_break_sxdp",
+  "charges_section",
+  "fine_item",
+  "toll_item",
+  "column_break_charges",
+  "service_item",
+  "automation_section",
+  "salik_automation",
+  "fines_automation",
+  "column_break_automation",
+  "toll_vat",
+  "fine_vat",
+  "salik_section",
+  "salik_available_balance",
+  "column_break_salik",
+  "salik_balance_updated_on"
  ],
  "fields": [
   {
@@ -27,13 +42,98 @@
   {
    "fieldname": "column_break_sxdp",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "charges_section",
+   "fieldtype": "Section Break",
+   "label": "Recoverable Charges"
+  },
+  {
+   "description": "Item used when a traffic fine is rebilled to the renter.",
+   "fieldname": "fine_item",
+   "fieldtype": "Link",
+   "label": "Traffic Fine Item",
+   "options": "Item"
+  },
+  {
+   "description": "Item used when a toll is rebilled to the renter.",
+   "fieldname": "toll_item",
+   "fieldtype": "Link",
+   "label": "Toll Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "column_break_charges",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "service_item",
+   "fieldtype": "Link",
+   "label": "Service Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "automation_section",
+   "fieldtype": "Section Break",
+   "label": "Automation"
+  },
+  {
+   "default": "0",
+   "description": "Pull Salik crossings automatically and match them to live agreements.",
+   "fieldname": "salik_automation",
+   "fieldtype": "Check",
+   "label": "Salik Automation"
+  },
+  {
+   "default": "0",
+   "description": "Pull traffic fines automatically and match them to live agreements.",
+   "fieldname": "fines_automation",
+   "fieldtype": "Check",
+   "label": "Fines Automation"
+  },
+  {
+   "fieldname": "column_break_automation",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "toll_vat",
+   "fieldtype": "Check",
+   "label": "Apply VAT on Tolls"
+  },
+  {
+   "default": "0",
+   "fieldname": "fine_vat",
+   "fieldtype": "Check",
+   "label": "Apply VAT on Fines"
+  },
+  {
+   "fieldname": "salik_section",
+   "fieldtype": "Section Break",
+   "label": "Salik Account"
+  },
+  {
+   "fieldname": "salik_available_balance",
+   "fieldtype": "Currency",
+   "label": "Available Balance (Salik)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_salik",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "salik_balance_updated_on",
+   "fieldtype": "Datetime",
+   "label": "Balance Updated On",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2025-07-10 17:07:36.465780",
+ "modified": "2026-08-04 12:30:00.000000",
  "modified_by": "Administrator",
  "module": "Fleetify",
  "name": "Fleetify Settings",

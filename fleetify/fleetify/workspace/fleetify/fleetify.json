@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"yUq9vQjEFj\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Fleetify</span>\",\"col\":12}},{\"id\":\"xwnlVgpnBC\",\"type\":\"paragraph\",\"data\":{\"text\":\"Fleet Rental Management System\",\"col\":12}},{\"id\":\"34f1_Zes2G\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"FQmXdAR4s2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"\u271a Add Reservation\",\"col\":3}},{\"id\":\"Q0rvvlAg2z\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"\u271a Add Agreement\",\"col\":3}},{\"id\":\"r3OjkZu1Ub\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"UdFb5lwNG8\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Vehicle Reservation\",\"col\":3}},{\"id\":\"uV5CxMuvcO\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Rental Agreement\",\"col\":3}},{\"id\":\"nSGxEZkNYc\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sales Invoice\",\"col\":3}},{\"id\":\"tBVm2Vra-K\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"wdTBV6nrFB\",\"type\":\"card\",\"data\":{\"card_name\":\"Setups\",\"col\":4}},{\"id\":\"quydNeFko-\",\"type\":\"card\",\"data\":{\"card_name\":\"Operations\",\"col\":4}},{\"id\":\"GTpjNETdsb\",\"type\":\"card\",\"data\":{\"card_name\":\"Tools\",\"col\":4}},{\"id\":\"ohdNUS100m\",\"type\":\"card\",\"data\":{\"card_name\":\"Key Reports\",\"col\":4}}]",
+ "content": "[{\"id\": \"yUq9vQjEFj\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\">Fleetify</span>\", \"col\": 12}}, {\"id\": \"xwnlVgpnBC\", \"type\": \"paragraph\", \"data\": {\"text\": \"Fleet Rental Management System\", \"col\": 12}}, {\"id\": \"34f1_Zes2G\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"FQmXdAR4s2\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"\\u271a Add Reservation\", \"col\": 3}}, {\"id\": \"Q0rvvlAg2z\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"\\u271a Add Agreement\", \"col\": 3}}, {\"id\": \"r3OjkZu1Ub\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"UdFb5lwNG8\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Vehicle Reservation\", \"col\": 3}}, {\"id\": \"uV5CxMuvcO\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Rental Agreement\", \"col\": 3}}, {\"id\": \"nSGxEZkNYc\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Sales Invoice\", \"col\": 3}}, {\"id\": \"tBVm2Vra-K\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"wdTBV6nrFB\", \"type\": \"card\", \"data\": {\"card_name\": \"Setups\", \"col\": 4}}, {\"id\": \"quydNeFko-\", \"type\": \"card\", \"data\": {\"card_name\": \"Operations\", \"col\": 4}}, {\"id\": \"GTpjNETdsb\", \"type\": \"card\", \"data\": {\"card_name\": \"Tools\", \"col\": 4}}, {\"id\": \"ohdNUS100m\", \"type\": \"card\", \"data\": {\"card_name\": \"Key Reports\", \"col\": 4}}, {\"id\": \"984369240a\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"11efaeba11\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\">Fleet Operations</span>\", \"col\": 12}}, {\"id\": \"804797ba0d\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Pending Bookings\", \"col\": 3}}, {\"id\": \"da446e3f1b\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Overdue Vehicles\", \"col\": 3}}, {\"id\": \"629aba94a5\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Overdue Service\", \"col\": 3}}, {\"id\": \"79055b0790\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Service Due Soon\", \"col\": 3}}, {\"id\": \"984369240a\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"a13b3ed9c7\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\">Recoverable Charges</span>\", \"col\": 12}}, {\"id\": \"a1526511f8\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Unbilled Fines\", \"col\": 3}}, {\"id\": \"839af285ca\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Unbilled Tolls\", \"col\": 3}}, {\"id\": \"ed827d171f\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Vehicles on Map\", \"col\": 3}}, {\"id\": \"984369240a\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"376fb80c70\", \"type\": \"card\", \"data\": {\"card_name\": \"Charges\", \"col\": 4}}, {\"id\": \"0599a0b423\", \"type\": \"card\", \"data\": {\"card_name\": \"Fleet Care\", \"col\": 4}}, {\"id\": \"549fa78803\", \"type\": \"card\", \"data\": {\"card_name\": \"Bookings\", \"col\": 4}}]",
  "creation": "2025-07-10 17:21:49.876245",
  "custom_blocks": [],
  "docstatus": 0,
@@ -148,9 +148,106 @@
    "link_type": "Report",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Charges",
+   "link_count": 4,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Traffic Fine",
+   "link_count": 0,
+   "link_to": "Traffic Fine",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Toll Charge",
+   "link_count": 0,
+   "link_to": "Toll Charge",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Fuel History",
+   "link_count": 0,
+   "link_to": "Fuel History",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Booking Refund",
+   "link_count": 0,
+   "link_to": "Booking Refund",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Fleet Care",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Service History",
+   "link_count": 0,
+   "link_to": "Service History",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Place",
+   "link_count": 0,
+   "link_to": "Place",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Bookings",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Website Booking",
+   "link_count": 0,
+   "link_to": "Website Booking",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2025-07-16 16:26:01.784108",
+ "modified": "2026-08-04 12:30:00.000000",
  "modified_by": "Administrator",
  "module": "Fleetify",
  "name": "Fleetify",
@@ -204,6 +301,69 @@
    "format": "{} today",
    "label": "\u271a Add Agreement",
    "link_to": "Rental Agreement",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "List",
+   "format": "{} pending",
+   "label": "Pending Bookings",
+   "link_to": "Website Booking",
+   "stats_filter": "[[\"Website Booking\", \"status\", \"=\", \"Pending\", false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Red",
+   "doc_view": "List",
+   "format": "{} overdue",
+   "label": "Overdue Vehicles",
+   "link_to": "Rental Agreement",
+   "stats_filter": "[[\"Rental Agreement\", \"dropoff_date_and_time\", \"<\", \"Today\", false], [\"Rental Agreement\", \"status\", \"in\", [\"Confirmed\", \"Active\"], false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Yellow",
+   "doc_view": "List",
+   "format": "{} due",
+   "label": "Service Due Soon",
+   "link_to": "Service History",
+   "stats_filter": "[[\"Service History\", \"next_service_date\", \"Timespan\", \"next month\", false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Red",
+   "doc_view": "List",
+   "format": "{} overdue",
+   "label": "Overdue Service",
+   "link_to": "Service History",
+   "stats_filter": "[[\"Service History\", \"next_service_date\", \"<\", \"Today\", false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Red",
+   "doc_view": "List",
+   "format": "{} unbilled",
+   "label": "Unbilled Fines",
+   "link_to": "Traffic Fine",
+   "stats_filter": "[[\"Traffic Fine\", \"billed_to_customer\", \"=\", \"0\", false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "List",
+   "format": "{} unbilled",
+   "label": "Unbilled Tolls",
+   "link_to": "Toll Charge",
+   "stats_filter": "[[\"Toll Charge\", \"billed_to_customer\", \"=\", \"0\", false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "Map",
+   "format": "{}",
+   "label": "Vehicles on Map",
+   "link_to": "Rental Vehicle",
    "stats_filter": "[]",
    "type": "DocType"
   }

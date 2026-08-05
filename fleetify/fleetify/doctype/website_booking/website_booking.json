@@ -1,0 +1,288 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-08-04 09:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "booking_section",
+  "status",
+  "vehicle",
+  "date_type",
+  "column_break_booking",
+  "start_date_time",
+  "end_date_time",
+  "rent",
+  "addresses_section",
+  "pickup_address",
+  "column_break_addresses",
+  "return_address",
+  "customer_section",
+  "customer_name",
+  "customer_phone",
+  "column_break_customer",
+  "customer_email",
+  "customer",
+  "identification_section",
+  "customer_id",
+  "customer_id_expiry",
+  "customer_license",
+  "column_break_identification",
+  "customer_license_expiry",
+  "customer_passport_no",
+  "customer_passport_expiry",
+  "documents_section",
+  "id_image_front",
+  "license_image_front",
+  "passport_image_front",
+  "e_sign",
+  "column_break_documents",
+  "id_image_back",
+  "license_image_back",
+  "passport_image_back",
+  "bank_receipt",
+  "conversion_section",
+  "rental_agreement"
+ ],
+ "fields": [
+  {
+   "fieldname": "booking_section",
+   "fieldtype": "Section Break",
+   "label": "Booking"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Pending\nConfirmed\nConverted\nCancelled",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vehicle",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Vehicle",
+   "options": "Rental Vehicle",
+   "reqd": 1
+  },
+  {
+   "default": "Daily",
+   "fieldname": "date_type",
+   "fieldtype": "Select",
+   "label": "Date Type",
+   "options": "Daily\nWeekly\nMonthly"
+  },
+  {
+   "fieldname": "column_break_booking",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start_date_time",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Start Date Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date_time",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "End Date Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rent",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Rent"
+  },
+  {
+   "fieldname": "addresses_section",
+   "fieldtype": "Section Break",
+   "label": "Pickup & Return"
+  },
+  {
+   "fieldname": "pickup_address",
+   "fieldtype": "Small Text",
+   "label": "Pickup Address"
+  },
+  {
+   "fieldname": "column_break_addresses",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "return_address",
+   "fieldtype": "Small Text",
+   "label": "Return Address"
+  },
+  {
+   "fieldname": "customer_section",
+   "fieldtype": "Section Break",
+   "label": "Customer"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Customer Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer_phone",
+   "fieldtype": "Data",
+   "label": "Customer Phone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "column_break_customer",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer_email",
+   "fieldtype": "Data",
+   "label": "Customer Email",
+   "options": "Email"
+  },
+  {
+   "description": "Set once this website booking is matched to an ERPNext Customer.",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "identification_section",
+   "fieldtype": "Section Break",
+   "label": "Identification"
+  },
+  {
+   "fieldname": "customer_id",
+   "fieldtype": "Data",
+   "label": "Customer ID"
+  },
+  {
+   "fieldname": "customer_id_expiry",
+   "fieldtype": "Date",
+   "label": "Customer ID Expiry"
+  },
+  {
+   "fieldname": "customer_license",
+   "fieldtype": "Data",
+   "label": "Customer License"
+  },
+  {
+   "fieldname": "column_break_identification",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer_license_expiry",
+   "fieldtype": "Date",
+   "label": "Customer License Expiry"
+  },
+  {
+   "fieldname": "customer_passport_no",
+   "fieldtype": "Data",
+   "label": "Customer Passport No."
+  },
+  {
+   "fieldname": "customer_passport_expiry",
+   "fieldtype": "Date",
+   "label": "Customer Passport Expiry"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "documents_section",
+   "fieldtype": "Section Break",
+   "label": "Documents"
+  },
+  {
+   "fieldname": "id_image_front",
+   "fieldtype": "Attach Image",
+   "label": "ID Image Front"
+  },
+  {
+   "fieldname": "license_image_front",
+   "fieldtype": "Attach Image",
+   "label": "License Image Front"
+  },
+  {
+   "fieldname": "passport_image_front",
+   "fieldtype": "Attach Image",
+   "label": "Passport Image Front"
+  },
+  {
+   "fieldname": "e_sign",
+   "fieldtype": "Attach Image",
+   "label": "E-Sign"
+  },
+  {
+   "fieldname": "column_break_documents",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "id_image_back",
+   "fieldtype": "Attach Image",
+   "label": "ID Image Back"
+  },
+  {
+   "fieldname": "license_image_back",
+   "fieldtype": "Attach Image",
+   "label": "License Image Back"
+  },
+  {
+   "fieldname": "passport_image_back",
+   "fieldtype": "Attach Image",
+   "label": "Passport Image Back"
+  },
+  {
+   "fieldname": "bank_receipt",
+   "fieldtype": "Attach",
+   "label": "Bank Receipt"
+  },
+  {
+   "fieldname": "conversion_section",
+   "fieldtype": "Section Break",
+   "label": "Conversion"
+  },
+  {
+   "fieldname": "rental_agreement",
+   "fieldtype": "Link",
+   "label": "Rental Agreement",
+   "no_copy": 1,
+   "options": "Rental Agreement",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-04 09:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Fleetify",
+ "name": "Website Booking",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "customer_name",
+ "track_changes": 1
+}
