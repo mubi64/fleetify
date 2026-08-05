@@ -11,6 +11,7 @@
   "column_break_4",
   "from_date",
   "to_date",
+  "online_booking",
   "vehicle_section",
   "vehicle"
  ],
@@ -70,12 +71,21 @@
    "in_standard_filter": 1,
    "label": "Vehicle",
    "options": "Rental Vehicle"
+  },
+  {
+   "default": "0",
+   "fieldname": "online_booking",
+   "fieldtype": "Check",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Online Booking"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-10 11:38:02.197929",
+ "modified": "2026-08-03 15:58:07.535639",
  "modified_by": "Administrator",
  "module": "Fleetify",
  "name": "Vehicle Reservation",

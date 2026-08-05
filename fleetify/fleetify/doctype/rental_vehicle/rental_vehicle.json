@@ -6,20 +6,56 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "vehicle_name",
   "vehicle_make",
   "vehicle_model",
   "year",
-  "license_plate",
-  "vin",
-  "color",
+  "vehicle_type",
   "column_break_7",
   "status",
+  "fuel_type",
+  "branch",
+  "color",
+  "registration_section",
+  "license_plate",
+  "vin",
+  "chassis_number",
+  "salik_tag_number",
+  "column_break_registration",
+  "registration_expiry",
+  "registration_image",
+  "insurance_expiry",
+  "insurance_image",
+  "rates_section",
   "daily_rate",
+  "weekly_rate",
+  "column_break_rates",
+  "monthly_rate",
+  "daily_km_limit",
+  "cost_section",
+  "vehicle_cost",
+  "purchasing_date",
+  "column_break_cost",
+  "mileage",
+  "location_section",
+  "latitude",
+  "column_break_location",
+  "longitude",
+  "media_section",
   "image",
+  "column_break_media",
+  "logo",
   "features_section",
   "features"
  ],
  "fields": [
+  {
+   "description": "Enter a nickname to distinguish this vehicle in Fleet management.",
+   "fieldname": "vehicle_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Vehicle Name"
+  },
   {
    "fieldname": "vehicle_make",
    "fieldtype": "Data",
@@ -36,28 +72,17 @@
    "reqd": 1
   },
   {
+   "description": "e.g. 1999, 2012, etc.",
    "fieldname": "year",
    "fieldtype": "Int",
    "label": "Year"
   },
   {
-   "fieldname": "license_plate",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "License Plate",
-   "reqd": 1,
-   "unique": 1
-  },
-  {
-   "fieldname": "vin",
-   "fieldtype": "Data",
-   "label": "VIN (Vehicle Identification Number)",
-   "unique": 1
-  },
-  {
-   "fieldname": "color",
-   "fieldtype": "Data",
-   "label": "Color"
+   "description": "Categorize this vehicle",
+   "fieldname": "vehicle_type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "\nCrossover\nMidsize Luxury SUV\nPremium SUV\nFull Size SUV\nStandard SUV\nMidsize SUV\nMini SUV\nMinivan\nLuxury\nPremium\nFull Size\nFull Size Elite\nFull Size Hybrid\nMidsize\nCompact\nEconomy\nEconomy Sedan\nSUV\nLuxury Van\nSedan\nExotic Car\nLuxury Car\nSports Car\nSaloon\nHatchback\nMPV\nSuper Car\nLuxury SUV\nConvertible"
   },
   {
    "fieldname": "column_break_7",
@@ -73,6 +98,84 @@
    "reqd": 1
   },
   {
+   "default": "Petrol",
+   "fieldname": "fuel_type",
+   "fieldtype": "Select",
+   "label": "Fuel Type",
+   "options": "Petrol\nDiesel"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "color",
+   "fieldtype": "Data",
+   "label": "Color"
+  },
+  {
+   "fieldname": "registration_section",
+   "fieldtype": "Section Break",
+   "label": "Registration & Identification"
+  },
+  {
+   "description": "For Dubai: \"ABC 12345\" or \"ABC12345\". For Sharjah: \"12345\"",
+   "fieldname": "license_plate",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "License Plate",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "description": "Vehicle Identification Number or Serial Number",
+   "fieldname": "vin",
+   "fieldtype": "Data",
+   "label": "VIN (Vehicle Identification Number)",
+   "unique": 1
+  },
+  {
+   "fieldname": "chassis_number",
+   "fieldtype": "Data",
+   "label": "Chassis Number"
+  },
+  {
+   "fieldname": "salik_tag_number",
+   "fieldtype": "Data",
+   "label": "Salik Tag Number"
+  },
+  {
+   "fieldname": "column_break_registration",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "registration_expiry",
+   "fieldtype": "Date",
+   "label": "Registration Expiry"
+  },
+  {
+   "fieldname": "registration_image",
+   "fieldtype": "Attach",
+   "label": "Registration Image"
+  },
+  {
+   "fieldname": "insurance_expiry",
+   "fieldtype": "Date",
+   "label": "Insurance Expiry"
+  },
+  {
+   "fieldname": "insurance_image",
+   "fieldtype": "Attach",
+   "label": "Insurance Image"
+  },
+  {
+   "fieldname": "rates_section",
+   "fieldtype": "Section Break",
+   "label": "Rental Rates"
+  },
+  {
    "fieldname": "daily_rate",
    "fieldtype": "Currency",
    "in_list_view": 1,
@@ -80,9 +183,86 @@
    "reqd": 1
   },
   {
+   "fieldname": "weekly_rate",
+   "fieldtype": "Currency",
+   "label": "Weekly Rent"
+  },
+  {
+   "fieldname": "column_break_rates",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "monthly_rate",
+   "fieldtype": "Currency",
+   "label": "Monthly Rent"
+  },
+  {
+   "fieldname": "daily_km_limit",
+   "fieldtype": "Int",
+   "label": "Daily KMs Limit"
+  },
+  {
+   "fieldname": "cost_section",
+   "fieldtype": "Section Break",
+   "label": "Cost & Usage"
+  },
+  {
+   "fieldname": "vehicle_cost",
+   "fieldtype": "Currency",
+   "label": "Vehicle Cost"
+  },
+  {
+   "fieldname": "purchasing_date",
+   "fieldtype": "Date",
+   "label": "Purchasing Date"
+  },
+  {
+   "fieldname": "column_break_cost",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mileage",
+   "fieldtype": "Float",
+   "label": "Mileage"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "location_section",
+   "fieldtype": "Section Break",
+   "label": "Location"
+  },
+  {
+   "fieldname": "latitude",
+   "fieldtype": "Data",
+   "label": "Latitude"
+  },
+  {
+   "fieldname": "column_break_location",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "longitude",
+   "fieldtype": "Data",
+   "label": "Longitude"
+  },
+  {
+   "fieldname": "media_section",
+   "fieldtype": "Section Break",
+   "label": "Media"
+  },
+  {
    "fieldname": "image",
    "fieldtype": "Attach Image",
-   "label": "Image"
+   "label": "Photo"
+  },
+  {
+   "fieldname": "column_break_media",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "logo",
+   "fieldtype": "Attach Image",
+   "label": "Logo"
   },
   {
    "fieldname": "features_section",
@@ -100,7 +280,7 @@
  "image_field": "image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-10 11:35:49.499044",
+ "modified": "2026-08-03 10:00:00.000000",
  "modified_by": "Administrator",
  "module": "Fleetify",
  "name": "Rental Vehicle",
